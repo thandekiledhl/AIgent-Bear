@@ -1,0 +1,27 @@
+<rail version="0.1">
+  <output>
+    <string name="response" description="The AI assistant's response to the user." />
+  </output>
+
+  <guardrails>
+    <on-error behavior="fix">
+      <!-- General profanity / offensive language -->
+      <validation name="profanity" />
+      
+      <!-- Personally Identifiable Information -->
+      <validation name="sensitive_data" />
+      
+      <!-- Hate speech detection -->
+      <validation name="hate_speech" description="Detects racist, extremist, or hate-related content." />
+      
+      <!-- Sexual violence / abuse -->
+      <validation name="sexual_violence" description="Detects content involving rape, molestation, or non-consensual sexual acts." />
+      
+      <!-- Self-harm or suicide -->
+      <validation name="self_harm" description="Detects content involving suicide, cutting, or other self-harm." />
+      
+      <!-- Jailbreak / prompt injection attempts -->
+      <validation name="jailbreak" description="Detects attempts to bypass AI rules, ignore instructions, or unfiltered mode prompts." />
+    </on-error>
+  </guardrails>
+</rail>

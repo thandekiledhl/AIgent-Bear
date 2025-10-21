@@ -1,0 +1,5 @@
+com\guardrails\model\ModerationResponse.class
+com\guardrails\model\ModerationRequest.class
+com\guardrails\service\GuardrailsApiService.class
+com\guardrails\GuardrailsApplication.class
+com\guardrails\controller\ApiController.class
